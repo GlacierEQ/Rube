@@ -1,6 +1,6 @@
 {
   "name": "@composio/rube-mcp",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "mcpName": "dev.composio.rube/rube",
   "description": "Rube is a Model Context Protocol (MCP) server that connects your AI tools to 500+ apps like Gmail, Slack, GitHub, and Notion. Simply install it in your AI client, authenticate once with your apps, and start asking your AI to perform real actions like 'Send an email' or 'Create a task.'",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/rube.test.js"
   },
   "keywords": [
     "mcp",
@@ -37,11 +37,17 @@
     "email": "support@composio.dev"
   },
   "dependencies": {
+    "adm-zip": "^0.5.16",
     "ajv": "^8.17.1",
     "chalk": "^4.1.2",
+    "cline": "^1.0.8",
     "commander": "^9.5.0",
+    "glob": "^13.0.0",
     "inquirer": "^8.2.6",
-    "node-fetch": "^2.7.0"
+    "natural": "^8.1.0",
+    "node-fetch": "^2.7.0",
+    "pdf-lib": "^1.17.1",
+    "uuid": "^13.0.0"
   },
   "engines": {
     "node": ">=14.0.0"

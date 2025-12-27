@@ -7,7 +7,7 @@
     "url": "https://github.com/ComposioHQ/Rube",
     "source": "github"
   },
-  "version": "0.0.2",
+  "version": "1.0.0",
   "remotes": [
     {
       "type": "streamable-http",
