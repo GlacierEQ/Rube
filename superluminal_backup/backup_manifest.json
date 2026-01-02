@@ -1,0 +1,11 @@
+{
+  "backupTimestamp": "2025-12-28T15:17:42.463Z",
+  "systemVersion": "1.0.0",
+  "contents": {
+    "caseDatabase": true,
+    "analysisReports": true,
+    "systemReports": true,
+    "totalCases": 0,
+    "totalSpaceSavedMB": 0
+  }
+}
