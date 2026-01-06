@@ -679,3 +679,5 @@ program
     }
   });
 
+// Parse command line arguments
+program.parse(process.argv);
