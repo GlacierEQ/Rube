@@ -1,0 +1,26 @@
+/**
+ * 🌠 RUBE PRELOAD SCRIPT
+ *
+ * Secure bridge between native Electron and Rube Dashboard
+ */
+
+const { contextBridge, ipcRenderer } = require('electron');
+
+contextBridge.exposeInMainWorld('rubeNative', {
+    // Send commands to main process
+    send: (channel, data) => {
+        let validChannels = ['execute-command', 'system-info'];
+        if (validChannels.includes(channel)) {
+            ipcRenderer.send(channel, data);
+        }
+    },
+    // Receive events from main process
+    on: (channel, func) => {
+        let validChannels = ['execute-command', 'status-update'];
+        if (validChannels.includes(channel)) {
+            ipcRenderer.on(channel, (event, ...args) => func(...args));
+        }
+    }
+});
+
+console.log('✨ Rube Native Bridge engaged');

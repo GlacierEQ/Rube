@@ -1077,6 +1077,26 @@ program
   });
 
 program
+  .command('gui')
+  .description('🌠 Launch Rube Desktop Application')
+  .action(async () => {
+    console.log(chalk.magenta.bold('\n🌠 LAUNCHING RUBE DESKTOP GUI...\n'));
+    const { spawn } = require('child_process');
+    const path = require('path');
+    const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
+    const mainPath = path.join(__dirname, '..', 'desktop', 'main.js');
+
+    const gui = spawn(electronPath, [mainPath], {
+        detached: true,
+        stdio: 'ignore'
+    });
+
+    gui.unref();
+    console.log(chalk.green('✨ Rube Desktop Application is starting in the background.'));
+    process.exit(0);
+  });
+
+program
   .command('dashboard:api')
   .description('📡 Show Dashboard API endpoints')
   .action(() => {
