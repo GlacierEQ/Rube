@@ -28,7 +28,20 @@ class SuperluminalIntegration {
             totalSpaceSaved: 0,
             icloudSpaceUsed: 0,
             localSpaceUsed: 0,
-            lastFullSync: null
+            lastFullSync: null,
+            localSpace: {
+                total: 0,
+                used: 0,
+                available: 0,
+                percentageUsed: 0
+            },
+            icloudSpace: {
+                available: 0,
+                used: 0,
+                total: 0,
+                percentageUsed: 0,
+                isMounted: false
+            }
         };
     }
 

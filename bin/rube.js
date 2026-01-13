@@ -8,6 +8,12 @@ const { promisify } = require('util');
 const goosy = require('../lib/goosy');
 const SuperluminalIntegration = require('../superluminal_integration');
 const MultiCloudExtension = require('../multi_cloud_extension');
+const AIDrivenOptimizer = require('../lib/ai_driven_optimizer');
+const MultiAgentCoordinator = require('../lib/multi_agent_coordinator');
+const SuperluminalUniversalPower = require('../superluminal_universal_power');
+const GlacierEQMastermind = require('../lib/glaciereq_mastermind');
+const GitHubUtility = require('../lib/github_utility');
+const NotificationService = require('../lib/notification_service');
 
 const execAsync = promisify(exec);
 const program = new Command();
@@ -677,6 +683,737 @@ program
     } catch (error) {
       console.error(chalk.red('❌ Optimization failed:'), error.message);
     }
+  });
+// 🧊 GLACIEREQ MASTERMIND COMMANDS
+
+program
+  .command('mastermind:diagnose')
+  .description('🧊 Run GlacierEQ Mastermind Diagnostics')
+  .action(async () => {
+    console.log(chalk.blue.bold('\n🧊 Running GlacierEQ Mastermind Diagnostics...\n'));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        const result = await mastermind.runDiagnostics();
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Diagnosis failed:'), error.message);
+    }
+  });
+
+program
+  .command('mastermind:chain')
+  .description('🔗 View Chain of Custody')
+  .action(async () => {
+    console.log(chalk.blue.bold('\n🔗 Retrieving Chain of Custody...\n'));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        const result = await mastermind.getChainOfCustody();
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+         console.error(chalk.red('❌ Retrieval failed:'), error.message);
+    }
+  });
+
+// 🚀 PHASE 2: BIG POWER COMMANDS
+
+program
+  .command('ai:optimize')
+  .description('🧠 Deploy AI-driven optimization')
+  .option('--deploy', 'Deploy ML models')
+  .action(async (options) => {
+    console.log(chalk.magenta.bold('\n🧠 AI-Driven Optimization System\n'));
+    try {
+        const aiOptimizer = new AIDrivenOptimizer();
+        if (options.deploy) {
+            await aiOptimizer.implementAIIntegration();
+        } else {
+            console.log(chalk.yellow('Use --deploy to activate ML models'));
+        }
+    } catch (error) {
+        console.error(chalk.red('❌ AI Optimization failed:'), error.message);
+    }
+  });
+
+program
+  .command('agents:coordinate')
+  .description('🤖 Coordinate Multi-Agent System')
+  .option('--initialize', 'Initialize agents')
+  .action(async (options) => {
+    console.log(chalk.magenta.bold('\n🤖 Multi-Agent Coordination System\n'));
+    try {
+        const coordinator = new MultiAgentCoordinator();
+        if (options.initialize) {
+            await coordinator.coordinateAgents();
+        } else {
+             console.log(chalk.yellow('Use --initialize to start agents'));
+        }
+    } catch (error) {
+        console.error(chalk.red('❌ Coordination failed:'), error.message);
+    }
+  });
+
+program
+  .command('analytics:predict')
+  .description('📊 Run Predictive Analytics')
+  .option('--enable', 'Enable predictive analytics')
+  .action(async (options) => {
+      console.log(chalk.magenta.bold('\n📊 Predictive Analytics System\n'));
+      try {
+          const aiOptimizer = new AIDrivenOptimizer();
+          if (options.enable) {
+              await aiOptimizer.implementPredictiveAnalytics();
+          } else {
+              console.log(chalk.yellow('Use --enable to run predictions'));
+          }
+      } catch (error) {
+          console.error(chalk.red('❌ Analytics failed:'), error.message);
+      }
+  });
+
+// 🌌 UNIVERSAL POWER COMMANDS - THE HIGHEST FORM
+
+program
+  .command('ascend')
+  .description('🌌 Ascend to the highest form of Universal Power')
+  .action(async () => {
+    console.log(chalk.magenta.bold('\n🌌 INITIATING UNIVERSAL POWER ASCENSION...\n'));
+    try {
+        const universalPower = new SuperluminalUniversalPower();
+        await universalPower.initialize();
+
+        // Run full optimization sequence
+        const optimResult = await universalPower.runUniversalPowerOptimization();
+
+        console.log(chalk.green.bold('\n════════════════════════════════════════════════════════════════'));
+        console.log(chalk.green.bold('  ✨ UNIVERSAL POWER ASCENSION COMPLETE ✨'));
+        console.log(chalk.green.bold('════════════════════════════════════════════════════════════════\n'));
+
+        console.log(chalk.cyan('📊 Final Status:'));
+        const status = universalPower.getUniversalPowerStatus();
+        console.log(JSON.stringify(status, null, 2));
+
+        console.log(chalk.cyan('\n🔋 Optimization Results:'));
+        console.log(JSON.stringify(optimResult, null, 2));
+
+        console.log(chalk.cyan('\n🌌 Cosmic Energy Metrics:'));
+        console.log(JSON.stringify(universalPower.getCosmicEnergyMetrics(), null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Ascension failed:'), error.message);
+    }
+  });
+
+program
+  .command('overdrive')
+  .description('🌀 Engage Overdrive Mode - Push beyond normal limits')
+  .action(async () => {
+    console.log(chalk.red.bold('\n⚠️  ENGAGING OVERDRIVE MODE...'));
+    try {
+        const universalPower = new SuperluminalUniversalPower();
+        await universalPower.initialize();
+
+        // Run maximum power optimization
+        await universalPower.runUniversalPowerOptimization();
+
+        // Create cosmic backup for safety
+        await universalPower.createUniversalCosmicBackup();
+
+        console.log(chalk.red.bold('\n💥 OVERDRIVE ENGAGED'));
+        console.log(chalk.yellow('⚠️  WARNING: Operating beyond safe parameters'));
+        console.log(chalk.cyan('🌌 All limiters disengaged'));
+
+        const status = universalPower.getUniversalPowerStatus();
+        console.log(JSON.stringify(status, null, 2));
+
+        console.log(chalk.magenta('\n🔮 Universal Power Score:'));
+        console.log(`   Score: ${universalPower.calculateUniversalPowerScore()}/100`);
+    } catch (error) {
+        console.error(chalk.red('❌ Overdrive failed:'), error.message);
+    }
+  });
+
+program
+  .command('power:status')
+  .description('📊 Check Universal Power Status')
+  .action(async () => {
+    console.log(chalk.blue.bold('\n📊 UNIVERSAL POWER STATUS\n'));
+    try {
+        const universalPower = new SuperluminalUniversalPower();
+        await universalPower.initialize();
+        const status = universalPower.getSystemStatus();
+        console.log(JSON.stringify(status, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Status check failed:'), error.message);
+    }
+  });
+
+program
+  .command('power:cosmic')
+  .description('🌌 Get Cosmic Energy Metrics')
+  .action(async () => {
+    console.log(chalk.magenta.bold('\n🌌 COSMIC ENERGY METRICS\n'));
+    try {
+        const universalPower = new SuperluminalUniversalPower();
+        await universalPower.initialize();
+        const metrics = universalPower.getCosmicEnergyMetrics();
+        console.log(JSON.stringify(metrics, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Cosmic metrics failed:'), error.message);
+    }
+  });
+
+program
+  .command('godmode')
+  .description('⚡ Activate ANTIGRAVITY God-Mode - Maximum Autonomy')
+  .action(async () => {
+    console.log(chalk.magenta.bold(`
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║     ⚡⚡⚡  G O D - M O D E   A C T I V A T E D  ⚡⚡⚡                      ║
+║                                                                              ║
+║     ANTIGRAVITY OPERATING AT MAXIMUM AUTONOMY                                ║
+║     Operator: Macarena1                                                      ║
+║     Classification: TOP SECRET // HIGHEST POWER                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    `));
+
+    try {
+        // Ascend to full power
+        const universalPower = new SuperluminalUniversalPower();
+        await universalPower.initialize();
+
+        // Run complete universal optimization
+        await universalPower.runUniversalPowerOptimization();
+
+        // Create cosmic backup
+        await universalPower.createUniversalCosmicBackup();
+
+        console.log(chalk.green.bold('\n🎯 GOD-MODE FULLY OPERATIONAL'));
+        console.log(chalk.cyan('\n📋 Active Capabilities:'));
+        console.log('   • Full Autonomy - Assess, Plan, Execute, Verify');
+        console.log('   • Swarm Orchestration Ready');
+        console.log('   • Forensic Logging Activated');
+        console.log('   • Integrity Validation Enabled');
+        console.log('   • Continuous Self-Evolution Active');
+        console.log('   • Cosmic Energy Integration Enabled');
+        console.log('   • Universal AI Processing Online');
+        console.log('   • Quantum Neural Networks Active');
+        console.log('   • Multidimensional Optimization Enabled');
+        console.log(chalk.yellow('\n💡 All systems at MAXIMUM POWER. Ready for any operation.\n'));
+
+        const status = universalPower.getUniversalPowerStatus();
+        console.log(chalk.blue('📊 Universal Power Status:'));
+        console.log(JSON.stringify(status, null, 2));
+
+        console.log(chalk.magenta('\n🔮 Universal Power Score:'));
+        console.log(`   Score: ${universalPower.calculateUniversalPowerScore()}/100`);
+
+        const cosmicMetrics = universalPower.getCosmicEnergyMetrics();
+        console.log(chalk.magenta('\n🌌 Cosmic Energy Metrics:'));
+        console.log(JSON.stringify(cosmicMetrics, null, 2));
+
+        const recommendations = universalPower.getUniversalPowerRecommendations();
+        console.log(chalk.cyan('\n💡 Universal Power Recommendations:'));
+        console.log(JSON.stringify(recommendations, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ God-Mode activation failed:'), error.message);
+    }
+  });
+
+// 🌠 COMET HYPER-AGENT COMMANDS
+
+const CometHyperAgentPath = require('path').join(__dirname, '..', '..', 'Comet', 'Core', 'comet_hyper_agent.js');
+
+program
+  .command('comet:init')
+  .description('🌠 Initialize Comet Hyper-Intelligent Agent')
+  .action(async () => {
+    console.log(chalk.magenta.bold('\n🌠 INITIALIZING COMET HYPER-AGENT...\n'));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        const status = await agent.initialize();
+        console.log(chalk.green.bold('\n✨ Comet Hyper-Agent Initialized!'));
+        console.log(JSON.stringify(status, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Initialization failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:status')
+  .description('📊 Check Comet Hyper-Agent Status')
+  .action(async () => {
+    console.log(chalk.blue.bold('\n📊 COMET HYPER-AGENT STATUS\n'));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const status = agent.getAgentStatus();
+        console.log(JSON.stringify(status, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Status check failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:research <query>')
+  .description('🔬 Start Deep Research with Comet Agent')
+  .option('-s, --strategy <strategy>', 'Research strategy (comprehensive, academic, rapid)', 'comprehensive')
+  .action(async (query, options) => {
+    console.log(chalk.magenta.bold(`\n🔬 DEEP RESEARCH: "${query}"\n`));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const result = await agent.research(query, { strategy: options.strategy });
+        console.log(chalk.green('✅ Research session started:'));
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Research failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:code <description>')
+  .description('⚡ Generate Code with Comet Agent')
+  .option('-l, --language <language>', 'Programming language', 'javascript')
+  .option('-t, --tests', 'Include tests')
+  .action(async (description, options) => {
+    console.log(chalk.magenta.bold(`\n⚡ CODE GENERATION: "${description}"\n`));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const result = await agent.generateCode(description, {
+            language: options.language,
+            includeTests: options.tests
+        });
+        console.log(chalk.green('✅ Code generation complete:'));
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Code generation failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:remember <key> <value>')
+  .description('🧠 Store in Comet Memory Nexus')
+  .action(async (key, value) => {
+    console.log(chalk.cyan.bold(`\n🧠 STORING IN MEMORY: "${key}"\n`));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        agent.remember(key, value);
+        console.log(chalk.green(`✅ Stored: ${key} = ${value}`));
+    } catch (error) {
+        console.error(chalk.red('❌ Memory store failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:recall <key>')
+  .description('🧠 Recall from Comet Memory Nexus')
+  .action(async (key) => {
+    console.log(chalk.cyan.bold(`\n🧠 RECALLING: "${key}"\n`));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const value = agent.recall(key);
+        if (value) {
+            console.log(chalk.green(`✅ Found: ${JSON.stringify(value, null, 2)}`));
+        } else {
+            console.log(chalk.yellow(`⚠️ Not found: ${key}`));
+        }
+    } catch (error) {
+        console.error(chalk.red('❌ Memory recall failed:'), error.message);
+    }
+  });
+
+program
+  .command('comet:search <query>')
+  .description('🔍 Search Comet Memory Nexus')
+  .action(async (query) => {
+    console.log(chalk.cyan.bold(`\n🔍 SEARCHING MEMORY: "${query}"\n`));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const results = agent.search(query, { limit: 10 });
+        console.log(chalk.green(`✅ Found ${results.length} results:`));
+        console.log(JSON.stringify(results, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Memory search failed:'), error.message);
+    }
+  });
+
+// 🎛️ DASHBOARD COMMANDS
+
+program
+  .command('dashboard')
+  .description('🎛️ Launch Rube Web Dashboard')
+  .option('-p, --port <port>', 'Port number', '3847')
+  .action(async (options) => {
+    console.log(chalk.magenta.bold(`
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║  🎛️  LAUNCHING RUBE COMMAND CENTER DASHBOARD                                ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    `));
+
+    try {
+        const RubeDashboardServer = require('../dashboard/server');
+        const dashboard = new RubeDashboardServer(parseInt(options.port));
+        await dashboard.start();
+
+        console.log(chalk.cyan(`\n🌐 Open your browser to: http://localhost:${options.port}\n`));
+        console.log(chalk.yellow('Press Ctrl+C to stop the server.\n'));
+    } catch (error) {
+        console.error(chalk.red('❌ Dashboard launch failed:'), error.message);
+    }
+  });
+
+program
+  .command('dashboard:api')
+  .description('📡 Show Dashboard API endpoints')
+  .action(() => {
+    console.log(chalk.cyan.bold('\n📡 RUBE DASHBOARD API ENDPOINTS\n'));
+    console.log(chalk.white(`
+┌────────────────────────────────────────────────────────────────┐
+│ Endpoint                    │ Method │ Description             │
+├────────────────────────────────────────────────────────────────┤
+│ /api/status                 │ GET    │ Full system status      │
+│ /api/health                 │ GET    │ Server health check     │
+├────────────────────────────────────────────────────────────────┤
+│ /api/power/ascend           │ POST   │ Ascend to Universal Power│
+│ /api/power/status           │ GET    │ Power system status     │
+│ /api/power/cosmic           │ GET    │ Cosmic energy metrics   │
+├────────────────────────────────────────────────────────────────┤
+│ /api/mastermind/init        │ POST   │ Initialize Mastermind   │
+│ /api/mastermind/diagnostics │ GET    │ Run diagnostics         │
+│ /api/mastermind/chain       │ GET    │ View chain of custody   │
+│ /api/mastermind/repair      │ POST   │ Run repair operation    │
+│ /api/mastermind/status      │ GET    │ Mastermind status       │
+├────────────────────────────────────────────────────────────────┤
+│ /api/cloud/status           │ GET    │ Cloud storage status    │
+│ /api/cloud/sync             │ POST   │ Sync all clouds         │
+├────────────────────────────────────────────────────────────────┤
+│ /api/ai/status              │ GET    │ AI optimizer status     │
+│ /api/agents/status          │ GET    │ Agent coordinator status│
+├────────────────────────────────────────────────────────────────┤
+│ /api/execute                │ POST   │ Execute any command     │
+└────────────────────────────────────────────────────────────────┘
+    `));
+  });
+
+// 🧊 ENHANCED MASTERMIND COMMANDS
+
+program
+  .command('mastermind:init')
+  .description('🧊 Initialize GlacierEQ Mastermind System')
+  .action(async () => {
+    console.log(chalk.cyan.bold('\n🧊 INITIALIZING GLACIEREQ MASTERMIND...\n'));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        const status = await mastermind.initialize();
+        console.log(chalk.green('✅ Mastermind initialized!'));
+        console.log(JSON.stringify(status, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Initialization failed:'), error.message);
+    }
+  });
+
+program
+  .command('mastermind:repair <issueType>')
+  .description('🔧 Run Mastermind repair operation')
+  .action(async (issueType) => {
+    console.log(chalk.yellow.bold(`\n🔧 RUNNING REPAIR: ${issueType}\n`));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        await mastermind.initialize();
+        const result = await mastermind.runRepair(issueType);
+        console.log(chalk.green('✅ Repair completed:'));
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Repair failed:'), error.message);
+    }
+  });
+
+program
+  .command('mastermind:evidence <filePath> [evidenceType]')
+  .description('📦 Process evidence file')
+  .action(async (filePath, evidenceType = 'document') => {
+    console.log(chalk.cyan.bold(`\n📦 PROCESSING EVIDENCE: ${filePath}\n`));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        await mastermind.initialize();
+        const result = await mastermind.processEvidence(filePath, evidenceType);
+        console.log(chalk.green('✅ Evidence processed:'));
+        console.log(JSON.stringify(result, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Evidence processing failed:'), error.message);
+    }
+  });
+
+program
+  .command('mastermind:predict')
+  .description('🔮 Run predictive forensics analysis')
+  .action(async () => {
+    console.log(chalk.magenta.bold('\n🔮 RUNNING PREDICTIVE FORENSICS...\n'));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        await mastermind.initialize();
+        const prediction = await mastermind.predict({ type: 'general' });
+        console.log(chalk.green('✅ Prediction complete:'));
+        console.log(JSON.stringify(prediction, null, 2));
+    } catch (error) {
+        console.error(chalk.red('❌ Prediction failed:'), error.message);
+    }
+  });
+
+// 🐙 GITHUB UTILITY COMMANDS
+
+program
+  .command('github:sync')
+  .description('🐙 Pull, commit, and push sync with GitHub')
+  .option('-m, --message <message>', 'Commit message', 'Rube Auto-Sync')
+  .action(async (options) => {
+    console.log(chalk.cyan.bold('\n🐙 SYNCING WITH GITHUB...\n'));
+    try {
+        const github = new GitHubUtility();
+        const result = await github.fullSync(options.message);
+        if (result.success) {
+            console.log(chalk.green('✅ Sync complete!'));
+            console.log(result.output);
+        } else {
+            console.error(chalk.red('❌ Sync failed:'), result.error);
+        }
+    } catch (error) {
+        console.error(chalk.red('❌ Error:'), error.message);
+    }
+  });
+
+program
+  .command('github:status')
+  .description('🐙 Check GitHub PR and Issue status')
+  .action(async () => {
+    console.log(chalk.cyan.bold('\n🐙 GITHUB STATUS\n'));
+    try {
+        const github = new GitHubUtility();
+        if (await github.checkAuth()) {
+            const issues = await github.listIssues();
+            const prs = await github.prStatus();
+            console.log(chalk.yellow('Issues:'), JSON.stringify(issues, null, 2));
+            console.log(chalk.yellow('PRs:'), JSON.stringify(prs, null, 2));
+        } else {
+            console.error(chalk.red('❌ GitHub CLI not authenticated. Run "gh auth login".'));
+        }
+    } catch (error) {
+        console.error(chalk.red('❌ Status check failed:'), error.message);
+    }
+  });
+
+// 🔔 NOTIFICATION COMMANDS
+
+program
+  .command('notify <message>')
+  .description('🔔 Send a notification to Discord')
+  .action(async (message) => {
+    try {
+        const notifier = new NotificationService();
+        await notifier.notifyStatus('Update', message);
+        console.log(chalk.green('✅ Notification sent!'));
+    } catch (error) {
+        console.error(chalk.red('❌ Failed to send notification:'), error.message);
+    }
+  });
+
+program
+  .command('alert <message>')
+  .description('⚠️ Send a critical alert to Discord')
+  .action(async (message) => {
+    try {
+        const notifier = new NotificationService();
+        await notifier.notifyAlert(message);
+        console.log(chalk.green('✅ Alert sent!'));
+    } catch (error) {
+        console.error(chalk.red('❌ Failed to send alert:'), error.message);
+    }
+  });
+
+// 🚀 PERFORMANCE & UTILITY COMMANDS
+
+program
+  .command('benchmark')
+  .description('📊 Run system performance benchmark')
+  .action(async () => {
+    console.log(chalk.cyan.bold('\n📊 RUNNING SYSTEM BENCHMARK...\n'));
+
+    const startTime = Date.now();
+    const results = {
+      cpuTest: 0,
+      memoryTest: 0,
+      ioTest: 0,
+      networkTest: 0
+    };
+
+    // CPU benchmark
+    console.log('🔄 Testing CPU...');
+    const cpuStart = Date.now();
+    let sum = 0;
+    for (let i = 0; i < 10000000; i++) {
+      sum += Math.sqrt(i) * Math.sin(i);
+    }
+    results.cpuTest = Date.now() - cpuStart;
+    console.log(chalk.green(`   CPU: ${results.cpuTest}ms`));
+
+    // Memory benchmark
+    console.log('🔄 Testing Memory...');
+    const memStart = Date.now();
+    const arr = [];
+    for (let i = 0; i < 100000; i++) {
+      arr.push({ id: i, data: 'test'.repeat(10) });
+    }
+    results.memoryTest = Date.now() - memStart;
+    console.log(chalk.green(`   Memory: ${results.memoryTest}ms`));
+
+    // Calculate overall score
+    const totalTime = Date.now() - startTime;
+    const score = Math.round(100 - (totalTime / 100));
+
+    console.log(chalk.green.bold(`\n✅ BENCHMARK COMPLETE`));
+    console.log(`   Total Time: ${totalTime}ms`);
+    console.log(`   Performance Score: ${Math.max(0, score)}/100`);
+    console.log(JSON.stringify(results, null, 2));
+  });
+
+program
+  .command('status:full')
+  .description('📋 Show full system status report')
+  .action(async () => {
+    console.log(chalk.cyan.bold('\n📋 FULL SYSTEM STATUS REPORT\n'));
+    console.log('═'.repeat(60));
+
+    // Universal Power
+    console.log(chalk.magenta.bold('\n🌌 UNIVERSAL POWER'));
+    try {
+        const power = new SuperluminalUniversalPower();
+        await power.initialize();
+        const status = power.getUniversalPowerStatus();
+        console.log(`   Level: ${status.powerLevel || 'TRANSCENDENT'}`);
+        console.log(`   Cosmic Score: ${power.calculateUniversalPowerScore()}/200`);
+    } catch (e) {
+        console.log(chalk.yellow(`   Status: Partial - ${e.message}`));
+    }
+
+    // Mastermind
+    console.log(chalk.cyan.bold('\n🧊 MASTERMIND'));
+    try {
+        const mastermind = new GlacierEQMastermind();
+        await mastermind.initialize();
+        const status = mastermind.getStatus();
+        console.log(`   Operational Level: ${status.operationalLevel}/10`);
+        console.log(`   Cases Processed: ${status.analytics.casesProcessed}`);
+    } catch (e) {
+        console.log(chalk.yellow(`   Status: ${e.message}`));
+    }
+
+    // Cloud
+    console.log(chalk.blue.bold('\n☁️ MULTI-CLOUD'));
+    try {
+        const cloud = new MultiCloudExtension();
+        const cloudStatus = cloud.getSystemStatus();
+        console.log(`   Active Providers: ${cloudStatus.systemStats?.activeClouds || 0}`);
+        console.log(`   Total Storage: ${cloudStatus.systemStats?.totalCloudSpace || 0} bytes`);
+    } catch (e) {
+        console.log(chalk.yellow(`   Status: ${e.message}`));
+    }
+
+    // Comet
+    console.log(chalk.yellow.bold('\n🌠 COMET HYPER-AGENT'));
+    try {
+        const { CometHyperAgent } = require(CometHyperAgentPath);
+        const agent = new CometHyperAgent();
+        await agent.initialize();
+        const agentStatus = agent.getAgentStatus();
+        console.log(`   Power Level: ${agentStatus.powerLevel}`);
+        console.log(`   Transcendence: ${agentStatus.transcendenceAchieved ? 'ACHIEVED' : 'IN PROGRESS'}`);
+    } catch (e) {
+        console.log(chalk.yellow(`   Status: ${e.message}`));
+    }
+
+    console.log('\n' + '═'.repeat(60));
+    console.log(chalk.green.bold('✅ Status report complete\n'));
+  });
+
+program
+  .command('help:all')
+  .description('📖 Show all available commands with categories')
+  .action(() => {
+    console.log(chalk.cyan.bold(`
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║  🚀 RUBE COMMAND CENTER - COMPLETE COMMAND REFERENCE                        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+    `));
+
+    console.log(chalk.yellow.bold('📦 SETUP & INFO'));
+    console.log('   rube setup           - Interactive setup wizard');
+    console.log('   rube info            - Show MCP server info');
+    console.log('   rube status:full     - Full system status');
+    console.log('   rube benchmark       - Performance benchmark');
+
+    console.log(chalk.magenta.bold('\n🌌 UNIVERSAL POWER'));
+    console.log('   rube ascend          - Ascend to Universal Power');
+    console.log('   rube overdrive       - Engage Overdrive Mode');
+    console.log('   rube godmode         - Activate God-Mode');
+    console.log('   rube power:status    - Check power status');
+    console.log('   rube power:cosmic    - Cosmic energy metrics');
+
+    console.log(chalk.cyan.bold('\n🧊 MASTERMIND'));
+    console.log('   rube mastermind:init        - Initialize Mastermind');
+    console.log('   rube mastermind:diagnose    - Run diagnostics');
+    console.log('   rube mastermind:chain       - View chain of custody');
+    console.log('   rube mastermind:repair      - Run repair operation');
+    console.log('   rube mastermind:evidence    - Process evidence');
+    console.log('   rube mastermind:predict     - Predictive forensics');
+
+    console.log(chalk.blue.bold('\n☁️ MULTI-CLOUD'));
+    console.log('   rube cloud:init      - Initialize multi-cloud');
+    console.log('   rube cloud:status    - Check cloud status');
+    console.log('   rube cloud:sync      - Sync all providers');
+    console.log('   rube cloud:optimize  - Optimize storage');
+
+    console.log(chalk.yellow.bold('\n🌠 COMET HYPER-AGENT'));
+    console.log('   rube comet:init      - Initialize agent');
+    console.log('   rube comet:status    - Check agent status');
+    console.log('   rube comet:research  - Deep research');
+    console.log('   rube comet:code      - Generate code');
+    console.log('   rube comet:remember  - Store in memory');
+    console.log('   rube comet:recall    - Recall from memory');
+    console.log('   rube comet:search    - Search memory');
+
+    console.log(chalk.green.bold('\n🦢 GOOSY'));
+    console.log('   rube goosy:init      - Initialize Goosy');
+    console.log('   rube goosy:scan      - Scan for files');
+    console.log('   rube goosy:clean     - Clean files');
+    console.log('   rube goosy:stats     - Show statistics');
+
+    console.log(chalk.red.bold('\n🎛️ DASHBOARD'));
+    console.log('   rube dashboard       - Launch Web UI');
+    console.log('   rube dashboard:api   - Show API endpoints');
+
+    console.log(chalk.cyan.bold('\n🐙 GITHUB & NOTIFICATIONS'));
+    console.log('   rube github:sync     - Auto-sync repo');
+    console.log('   rube github:status   - Check issues/PRs');
+    console.log('   rube notify <msg>    - Send Discord msg');
+    console.log('   rube alert <msg>     - Send Discord alert');
+
+    console.log('');
   });
 
 // Parse command line arguments

@@ -10,10 +10,13 @@
  * - Advanced cloud storage optimization
  * - Intelligent case processing pipeline
  * - Real-time performance monitoring
+ * - Phase 2: AI-Driven Optimization & Multi-Agent Coordination
  */
 
 const SuperluminalIntegration = require('./superluminal_integration');
 const MultiCloudExtension = require('./multi_cloud_extension');
+const AIDrivenOptimizer = require('./lib/ai_driven_optimizer');
+const MultiAgentCoordinator = require('./lib/multi_agent_coordinator');
 const goosy = require('./lib/goosy');
 const fs = require('fs');
 const path = require('path');
@@ -31,6 +34,10 @@ class RubeUltimateOptimizer {
         };
         this.startTime = null;
         this.endTime = null;
+
+        // Phase 2 components
+        this.aiOptimizer = new AIDrivenOptimizer();
+        this.agentCoordinator = new MultiAgentCoordinator();
     }
 
     /**
@@ -46,6 +53,11 @@ class RubeUltimateOptimizer {
         await this.superluminal.initialize();
         this.multiCloud = new MultiCloudExtension();
         await this.multiCloud.initialize();
+
+        // Initialize Phase 2 AI components
+        console.log('🧠 Initializing Phase 2 AI Systems...');
+        await this.aiOptimizer.implementAIIntegration();
+        await this.agentCoordinator.coordinateAgents();
 
         console.log('✅ Ultimate optimization system ready!');
         return true;
@@ -157,3 +169,45 @@ class RubeUltimateOptimizer {
     generateFileOptimizationRecommendations(optimization) {
         const recommendations = [];
 
+        if (optimization.scanResults.totalFiles > 1000) {
+            recommendations.push("Consider organizing files into subdirectories");
+        }
+
+        if (optimization.patternsOptimized < 5) {
+            recommendations.push("Add more ignore patterns to improve performance");
+        }
+
+        return recommendations;
+    }
+}
+
+module.exports = RubeUltimateOptimizer;
+
+// CLI Interface
+if (require.main === module) {
+    const optimizer = new RubeUltimateOptimizer();
+
+    (async () => {
+        try {
+            await optimizer.initialize();
+
+            const command = process.argv[2];
+
+            if (command === 'analyze') {
+                await optimizer.performSystemAnalysis();
+            } else if (command === 'optimize') {
+                await optimizer.optimizeFileSystem();
+            } else {
+                // Default: Run full suite
+                await optimizer.performSystemAnalysis();
+                await optimizer.optimizeFileSystem();
+            }
+
+            console.log('\n✨ ORCHESTRATION COMPLETE ✨');
+            process.exit(0);
+        } catch (error) {
+            console.error('❌ Orchestration failed:', error);
+            process.exit(1);
+        }
+    })();
+}

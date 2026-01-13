@@ -12,7 +12,12 @@ pids
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
-coverage/
+# Rube Specific
+.goosy/
+system_reports/
+storage_optimization_report.json
+storage_optimization_summary.md
+UNIVERSAL_POWER_UPGRADE_SUMMARY.md
 *.lcov
 
 # nyc test coverage

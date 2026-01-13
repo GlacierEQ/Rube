@@ -1,6 +1,52 @@
-# Rube MCP Server
+# 🌌 RUBE: THE SUPERLUMINAL COMMAND CENTER
 
-[Rube](https://rube.app) is a **Model‑Context‑Protocol (MCP) server** built on the Composio integration platform. It connects AI chat tools to more than **500 business and productivity applications** – things like Gmail, Slack, Notion, GitHub, Linear, Airtable, and many others. Once installed, you can ask your AI tool to perform everyday tasks (e.g. “send an email to the latest customer,” “create a Linear issue,” “update my Notion database,” or “post an update to Slack”) and Rube will securely talk to the relevant apps on your behalf. Instead of writing complex API integrations yourself, you just tell your AI assistant what you want to do.
+[Rube](https://rube.app) is no longer just a standard MCP server. It has undergone a **Superluminal Expansion**, transforming into a high-precision Command Center for system optimization, forensic analysis, and universal power management.
+
+## 🚀 SUPERLUMINAL EXPANSION
+
+Rube now integrates several advanced subsystems designed for maximum power and autonomy:
+
+- **🌌 Universal Power System**: Engage `ascend`, `overdrive`, and `godmode` to maximize system performance and cosmic energy integration.
+- **🧊 GlacierEQ Mastermind**: A deep-forensic engine for diagnostics, chain of custody tracking, and predictive analysis.
+- **🌠 Comet Hyper-Agent**: Integrated browser automation, deep research, and high-IQ code generation.
+- **🎛️ Command Dashboard**: A stunning, real-time Web UI for monitoring system status and executing remote commands.
+- **🐙 GitHub & Alerts**: Automated repository synchronization and critical Discord notifications.
+
+## 🎛️ RUBE COMMAND CENTER DASHBOARD
+
+Launch the visual interface to monitor your universal power in real-time:
+
+```bash
+rube dashboard
+```
+Accessible at `http://localhost:3847`.
+
+## 📦 ADVANCED CLI COMMANDS
+
+Rube now features a comprehensive suite of power commands. Run `rube help:all` for the full reference.
+
+### 🌌 Universal Power
+- `rube ascend` - Ascend to Universal Power level
+- `rube overdrive` - Engage Overdrive Mode
+- `rube godmode` - Activate God-Mode
+- `rube power:cosmic` - View cosmic energy metrics
+
+### 🧊 Mastermind Forensics
+- `rube mastermind:init` - Initialize forensic engine
+- `rube mastermind:diagnose` - Run deep system diagnostics
+- `rube mastermind:predict` - Predictive forensic analysis
+
+### 🌠 Comet Hyper-Agent
+- `rube comet:research <query>` - Deep multi-source intelligence
+- `rube comet:code <desc>` - High-IQ code generation
+- `rube comet:status` - Check agent transcendence level
+
+### 🐙 Utilities
+- `rube github:sync` - Automated repository synchronization
+- `rube alert <msg>` - Send critical alert to Discord
+- `rube benchmark` - System performance benchmarking
+
+---
 
 ## Why Rube?
 
