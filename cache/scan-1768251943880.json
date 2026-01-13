@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-01-12T21:05:43.880Z",
+  "stats": {
+    "totalFiles": 200,
+    "ignoredFiles": 4,
+    "scanTime": 57,
+    "lastScan": "2026-01-12T21:05:43.880Z"
+  },
+  "ignoredFiles": [
+    ".env",
+    ".goosy",
+    ".vscode",
+    "node_modules"
+  ],
+  "patterns": [
+    ".goosy/",
+    "node_modules/",
+    "vendor/",
+    "bower_components/",
+    "dist/",
+    "build/",
+    "out/",
+    "*.min.js",
+    "*.min.css",
+    ".env",
+    ".env.*",
+    "!.env.example",
+    "*.log",
+    "logs/",
+    "npm-debug.log*",
+    "yarn-debug.log*",
+    "yarn-error.log*",
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+    ".vscode/",
+    ".idea/",
+    "*.swp",
+    "*.swo",
+    "*~",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "Gemfile.lock",
+    "composer.lock",
+    "coverage/",
+    ".nyc_output/",
+    "*.tmp",
+    "*.temp",
+    ".cache/"
+  ],
+  "performance": {
+    "startTime": 15645.316178,
+    "endTime": 15702.403464,
+    "memoryUsage": [
+      62080448,
+      63979336
+    ],
+    "duration": 57.08728600000177
+  },
+  "recommendations": [
+    {
+      "type": "memory",
+      "message": "Scan used 1.81MB additional memory",
+      "suggestion": "Consider increasing cache efficiency"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-01-12T21:04:36.059Z",
+  "stats": {
+    "totalFiles": 201,
+    "ignoredFiles": 5,
+    "scanTime": 159,
+    "lastScan": "2026-01-12T21:04:36.059Z"
+  },
+  "ignoredFiles": [
+    ".env",
+    ".goosy",
+    ".vscode",
+    "node_modules",
+    "package-lock.json"
+  ],
+  "patterns": [
+    ".goosy/",
+    "node_modules/",
+    "vendor/",
+    "bower_components/",
+    "dist/",
+    "build/",
+    "out/",
+    "*.min.js",
+    "*.min.css",
+    ".env",
+    ".env.*",
+    "!.env.example",
+    "*.log",
+    "logs/",
+    "npm-debug.log*",
+    "yarn-debug.log*",
+    "yarn-error.log*",
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+    ".vscode/",
+    ".idea/",
+    "*.swp",
+    "*.swo",
+    "*~",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "Gemfile.lock",
+    "composer.lock",
+    "coverage/",
+    ".nyc_output/",
+    "*.tmp",
+    "*.temp",
+    ".cache/"
+  ],
+  "performance": {
+    "startTime": 16879.156958,
+    "endTime": 17037.986173,
+    "memoryUsage": [
+      62096952,
+      64000152
+    ],
+    "duration": 158.82921500000157
+  },
+  "recommendations": [
+    {
+      "type": "file-type-analysis",
+      "message": "Found 1 different file types being ignored",
+      "data": {
+        "json": 1
+      }
+    },
+    {
+      "type": "memory",
+      "message": "Scan used 1.82MB additional memory",
+      "suggestion": "Consider increasing cache efficiency"
+    }
+  ]
+}
