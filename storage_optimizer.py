@@ -1,14 +1,16 @@
 '''
  ════════════════════════════════════════════════════════════════════════════
-  COPYRIGHT © 2026 GlacierEQ × ANTIGRAVITY. ALL RIGHTS RESERVED.
+  WARNING: CLASSIFIED TECHNOLOGY // TIER 0 CLEARANCE REQUIRED
+ ════════════════════════════════════════════════════════════════════════════
+  COPYRIGHT © 2026 GlacierEQ × ANTIGRAVITY.
 
-  This software is the confidential and proprietary information of GlacierEQ.
-  Unauthorized copying, scraping, modification, or distribution of this file,
-  via any medium, is strictly prohibited.
+  This file contains "Stealth" and "Ring-Level" technologies.
+  UNAUTHORIZED ACCESS, COPYING, OR REVERSE ENGINEERING IS FORBIDDEN.
 
-  TYPE: PROPRIETARY & CONFIDENTIAL
-  SYSTEM: ANTIGRAVITY STEALTH ARSENAL
-  ID: GLACIEREQ-IP-GUARD-V1
+  DANGER: Capable of hardware-level interaction (Ring -3 to Ring -6).
+  Operate strictly within authorized "God Mode" parameters.
+
+  PROPERTY OF GLACIEREQ. DO NOT DISTRIBUTE.
  ════════════════════════════════════════════════════════════════════════════
 '''
 
