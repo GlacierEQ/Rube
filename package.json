@@ -11,7 +11,40 @@
     "postinstall": "node ./scripts/postinstall.js",
     "test": "node test/rube.test.js",
     "gui": "electron desktop/main.js",
-    "dashboard": "node dashboard/server.js"
+    "dashboard": "node dashboard/server.js",
+    "dist": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "com.antigravity.rube",
+    "productName": "Rube Command Center",
+    "copyright": "Copyright © 2026 Macarena1 / ANTIGRAVITY",
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg"
+      ],
+      "icon": "dashboard/public/rube_icon.png",
+      "darkModeSupport": true
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "dashboard/public/rube_icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "**/*",
+      "!node_modules/*"
+    ],
+    "publish": null
   },
   "keywords": [
     "mcp",
