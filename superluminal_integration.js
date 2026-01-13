@@ -1,3 +1,17 @@
+/*
+ * ════════════════════════════════════════════════════════════════════════════
+ *  COPYRIGHT © 2026 GlacierEQ × ANTIGRAVITY. ALL RIGHTS RESERVED.
+ *
+ *  This software is the confidential and proprietary information of GlacierEQ.
+ *  Unauthorized copying, scraping, modification, or distribution of this file,
+ *  via any medium, is strictly prohibited.
+ *
+ *  TYPE: PROPRIETARY & CONFIDENTIAL
+ *  SYSTEM: ANTIGRAVITY STEALTH ARSENAL
+ *  ID: GLACIEREQ-IP-GUARD-V1
+ * ════════════════════════════════════════════════════════════════════════════
+ */
+
 #!/usr/bin/env node
 
 /**
