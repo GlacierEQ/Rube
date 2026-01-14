@@ -14,8 +14,6 @@
  * ════════════════════════════════════════════════════════════════════════════
  */
 
-#!/usr/bin/env node
-
 /**
  * SUPERLUMINAL CASE MANAGEMENT SYSTEM
  * Advanced case file analysis, merging, and optimization platform

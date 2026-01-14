@@ -14,8 +14,6 @@
  * ════════════════════════════════════════════════════════════════════════════
  */
 
-#!/usr/bin/env node
-
 /**
  * SUPERLUMINAL MULTI-CLOUD STORAGE EXTENSION
  * Advanced integration with iCloud, Dropbox, and Google Drive

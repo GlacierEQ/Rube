@@ -14,8 +14,6 @@
  * ════════════════════════════════════════════════════════════════════════════
  */
 
-#!/usr/bin/env node
-
 /**
  * SUPERLUMINAL ICLOUD MEMORY EXTENSION SYSTEM
  * Advanced iCloud storage integration for case management

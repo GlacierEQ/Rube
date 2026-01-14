@@ -14,8 +14,6 @@
  * ════════════════════════════════════════════════════════════════════════════
  */
 
-#!/usr/bin/env node
-
 /**
  * SUPERLUMINAL COMPLETE INTEGRATION SYSTEM
  * Unified case management with iCloud memory extension

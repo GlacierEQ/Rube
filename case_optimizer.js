@@ -14,8 +14,6 @@
  * ════════════════════════════════════════════════════════════════════════════
  */
 
-#!/usr/bin/env node
-
 /**
  * SUPERLUMINAL CASE OPTIMIZER
  * Advanced case file merging, compression, and analysis system
