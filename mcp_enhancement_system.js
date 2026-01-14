@@ -226,6 +226,13 @@ class MCPEnhancementSystem {
             capabilities: ['strategic_planning', 'future_prediction', '1.8M_context'],
             provider: 'openrouter/sherlock-alpha'
         });
+
+        this.engines.set('core_think', {
+            name: 'CoreThink - Symbolic Reasoning Layer',
+            version: 'V1-SYMBOLIC',
+            capabilities: ['neuro_symbolic_logic', 'long_horizon_planning', 'explainable_traces'],
+            provider: 'corethink/reasoning-v1' // Conceptual provider mapping
+        });
     }
 
     activateUniversalPower() {
