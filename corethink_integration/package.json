@@ -1,0 +1,22 @@
+{
+  "name": "corethink-highlight-integration",
+  "version": "1.0.0",
+  "description": "CoreThink model integration for Highlight AI",
+  "main": "api_wrapper.js",
+  "scripts": {
+    "start": "node api_wrapper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "crypto": "built-in"
+  },
+  "keywords": [
+    "corethink",
+    "highlight-ai",
+    "ai-model",
+    "integration"
+  ],
+  "author": "ANTIGRAVITY",
+  "license": "GLACIEREQ_CLASSIFIED"
+}

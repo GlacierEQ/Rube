@@ -1,4 +1,18 @@
-#!/usr/bin/env node
+/*
+ * ════════════════════════════════════════════════════════════════════════════
+ *  WARNING: CLASSIFIED TECHNOLOGY // TIER 0 CLEARANCE REQUIRED
+ * ════════════════════════════════════════════════════════════════════════════
+ *  COPYRIGHT © 2026 GlacierEQ × ANTIGRAVITY.
+ *
+ *  This file contains "Stealth" and "Ring-Level" technologies.
+ *  UNAUTHORIZED ACCESS, COPYING, OR REVERSE ENGINEERING IS FORBIDDEN.
+ *
+ *  DANGER: Capable of hardware-level interaction (Ring -3 to Ring -6).
+ *  Operate strictly within authorized "God Mode" parameters.
+ *
+ *  PROPERTY OF GLACIEREQ. DO NOT DISTRIBUTE.
+ * ════════════════════════════════════════════════════════════════════════════
+ */
 
 /**
  * SUPERLUMINAL CASE MANAGEMENT SYSTEM
